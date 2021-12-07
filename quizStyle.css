@@ -2,35 +2,45 @@ body{
     background-image: url('world.png');
     background-size: cover;
 }
-
-.title{
-    text-align: center;
-    font-size: larger;
-    color: darkred;
-
-
-
-}
 .main-box{
-    border: 1px solid brown;
-    padding: 0.8em;
-    width: 50%;
-    height: 250px;
-    display: flex;
+    border: solid darkred 2px;
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+
 }
-p{
+.title{
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Roboto', sans-serif;
 
-    border: 1px solid brown;
-    border-radius: 100px;
+    color: firebrick;
     text-align: center;
-    height:2em;
-    line-height: 2em;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    flex-basis: 6em;
-    flex-grow: initial;
+}
+.questions{
+   /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.country{
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Roboto', sans-serif;
 
-    position: relative;
-    top: 100px;
+    font-size: larger;
+    font-weight: bold;
+    border: solid darkred 1px;
+    border-radius: 20px;
+    background-color: yellowgreen;
+    text-align: center;
+    width: 100px;           /*ugly way with non scaling squares, but correct for the program*/
+    height: 100px;
+
+
+
+    /*margin-bottom: 5px;*/
+
 
 }
