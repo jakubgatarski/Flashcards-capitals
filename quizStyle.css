@@ -35,8 +35,9 @@ body{
     border-radius: 20px;
     background-color: yellowgreen;
     text-align: center;
-    width: 100px;           /*ugly way with non scaling squares, but correct for the program*/
-    height: 100px;
+    width: 100%;           /*ugly way with non scaling squares, but correct for the program*/
+    height: 0;
+    padding-bottom: 100%;
 
 
 
