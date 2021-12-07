@@ -1,0 +1,36 @@
+body{
+    background-image: url('world.png');
+    background-size: cover;
+}
+
+.title{
+    text-align: center;
+    font-size: larger;
+    color: darkred;
+
+
+
+}
+.main-box{
+    border: 1px solid brown;
+    padding: 0.8em;
+    width: 50%;
+    height: 250px;
+    display: flex;
+}
+p{
+
+    border: 1px solid brown;
+    border-radius: 100px;
+    text-align: center;
+    height:2em;
+    line-height: 2em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    flex-basis: 6em;
+    flex-grow: initial;
+
+    position: relative;
+    top: 100px;
+
+}
