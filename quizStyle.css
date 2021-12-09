@@ -1,47 +1,88 @@
-body{
+body {
     background-image: url('world.png');
     background-size: cover;
 }
-.main-box{
+
+.main-box {
     border: solid darkred 2px;
     width: 40%;
     margin: auto;
     padding: 10px;
 
 }
-.title{
+
+.title {
     font-family: 'Permanent Marker', cursive;
     font-family: 'Roboto', sans-serif;
 
     color: firebrick;
     text-align: center;
 }
-.questions{
-   /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;*/
+
+.questions {
+    /* display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 20px;
 }
-.country{
+
+.card {
+
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    transition: all .5s linear;
+    transform-style: preserve-3d;
+
+
+    /*margin-bottom: 5px;*/
+}
+
+.capital,
+.country {
+
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
     font-family: 'Permanent Marker', cursive;
     font-family: 'Roboto', sans-serif;
-
     font-size: larger;
     font-weight: bold;
     border: solid darkred 1px;
     border-radius: 20px;
-    background-color: yellowgreen;
+    position: absolute;
+    /* text-align: center;
+     vertical-align: middle;
+     line-height: 100%;*/
+
+
+}
+
+.country {
+    background: linear-gradient(darkorange, greenyellow);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.capital {
+    background: darkorange;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.questions {
+    perspective: 1000px;
+}
+
+p {
     text-align: center;
-    width: 100%;           /*ugly way with non scaling squares, but correct for the program*/
-    height: 0;
-    padding-bottom: 100%;
-
-
-
-    /*margin-bottom: 5px;*/
-
 
 }
