@@ -4,6 +4,7 @@ let africaBtn = document.getElementById("africa");
 let northAmeBtn = document.getElementById("north-america");
 let southAmeBtn = document.getElementById("south-america");
 let australiaBtn = document.getElementById("australia");
+let worldBtn = document.getElementById("whole-world");
 let europeCountries = ["Poland", "Germany","France","Portugal","Slovenia","Italy","Albania","Greece","Denmark","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Estonia","Faroe Islands","Finland","Gibraltar","Hungary","Iceland","Ireland","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Romania","Russia","San Marino","Serbia","Slovakia","Spain","Sweden","Switzerland","Turkey","Ukraine","United Kingdom","Vatican"];
 let europeCapitals = ["Warsaw", "Berlin", "Paris","Lisbon","Ljubljana","Rome","Tirana","Athens","Copenhagen","Andorra la Vella","Vienna","Minsk","Brussels","Sarajevo","Sofia","Zagreb","Nicosia","Prague","Tallin","Torshavn","Helsinki","Gibraltar","Budapest","Reykjavik","Dublin","Pristina","Riga","Vaduz","Vilnius","Luxembourg","Valletta","Chisinau","Monaco","Podgorica","Amsterdam","Skopje","Oslo","Bucharest","Moscow","San Marino","Belgrade","Bratislava","Madrid","Stockholm","Bern","Ankara","Kyiv","London","Vatican"];
 let asiaCountries = ["China", "Pakistan", "Philippines","Malaysia","Vietnam", "Iraq","Qatar","Cambodia","North Korea","Afghanistan","Armenia","Azerbaijan","Bahrain","Bangladesh","Bhutan","Brunei","East Timor","Georgia","Guam","India","Indonesia","Iran","Israel","Japan","Jordan","Kazakhstan","Kuwait","Kyrgyzstan","Laos","Lebanon","Mongolia","Myanmar","Nepal","Oman","Palau","Palestine","Saudi Arabia","Singapore","South Korea","Sri Lanka","Syria","Taiwan","Tajikistan","Thailand","Turkmenistan","United Araba Emirates","Uzbekistan","Yemen"];
@@ -16,9 +17,11 @@ let southAmericaCountries = ["Argentina","Bolivia","Brazil","Chile","Columbia","
 let southAmericaCapitals = ["Buenos Aires","La Paz","Brasilia","Santiago","Bogota","Quito","Georgetown","Asuncion","Lima","Paramaribo","Montevideo","Caracas"];
 let australiaCountries = ["Australia","Cook Islands","Fiji","Kiribati","Nauru","New Caledonia","New Zealand","Papua New Guinea","Saint Helena","Samoa","Solomon Islands","Tonga","Tuvalu","Vanuatu"];
 let australiaCapitals = ["Canberra","Avarua","Suva","South Tarawa","Yaren","Noumea","Wellington","Port Moresby","Jamestown","Apia","Honiara","Nuku'alofa","Funafuti","Port Vila"];
-
+let worldCountries = europeCountries.concat(asiaCountries, africaCountries, northAmericaCountries, southAmericaCountries, australiaCountries);
+let worldCapitals = europeCapitals.concat(asiaCapitals, africaCapitals, northAmericaCapitals, southAmericaCapitals, australiaCapitals);
 //let numberOfCountries = countryList.length();
-
+console.log(worldCountries.length);
+console.log(worldCapitals.length);
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -31,7 +34,7 @@ europeBtn.addEventListener('click', function () {
         document.getElementById("country" + i).textContent = europeCountries[a];
         document.getElementById("capital" + i).textContent = europeCapitals[a];
     }
-    document.querySelector("h1").textContent = "What is the capital of Europa Countries";
+    document.querySelector("h1").textContent = "Europa Capitals";
 });
 asiaBtn.addEventListener('click', function (){
     for (let j=1; j<=9; j++) {
@@ -39,7 +42,7 @@ asiaBtn.addEventListener('click', function (){
         document.getElementById("country"+j).textContent = asiaCountries[a];
         document.getElementById("capital"+j).textContent = asiaCapitals[a];
     }
-    document.querySelector("h1").textContent = "What is the capital of Asia Countries";
+    document.querySelector("h1").textContent = "Asia Capitals";
 });
 
 africaBtn.addEventListener('click', function (){
@@ -48,7 +51,7 @@ africaBtn.addEventListener('click', function (){
         document.getElementById("country"+k).textContent = africaCountries[a];
         document.getElementById("capital"+k).textContent = africaCapitals[a];
     }
-    document.querySelector("h1").textContent = "What is the capital of Africa Countries";
+    document.querySelector("h1").textContent = "Africa Capitals";
 });
 northAmeBtn.addEventListener('click', function (){
     for (let k=1; k<=9; k++) {
@@ -56,7 +59,7 @@ northAmeBtn.addEventListener('click', function (){
         document.getElementById("country"+k).textContent = northAmericaCountries[a];
         document.getElementById("capital"+k).textContent = northAmericaCapitals[a];
     }
-    document.querySelector("h1").textContent = "What is the capital of North America Countries";
+    document.querySelector("h1").textContent = "North America Capitals";
 });
 southAmeBtn.addEventListener('click', function (){
     for (let k=1; k<=9; k++) {
@@ -64,7 +67,7 @@ southAmeBtn.addEventListener('click', function (){
         document.getElementById("country"+k).textContent = southAmericaCountries[a];
         document.getElementById("capital"+k).textContent = southAmericaCapitals[a];
     }
-    document.querySelector("h1").textContent = "What is the capital of South America Countries";
+    document.querySelector("h1").textContent = "South America Capitals";
 });
 
 australiaBtn.addEventListener('click', function (){
@@ -73,5 +76,14 @@ australiaBtn.addEventListener('click', function (){
         document.getElementById("country"+k).textContent = australiaCountries[a];
         document.getElementById("capital"+k).textContent = australiaCapitals[a];
     }
-    document.querySelector("h1").textContent = "What is the capital of Oceania Countries";
+    document.querySelector("h1").textContent = "Oceania Capitals";
+});
+
+worldBtn.addEventListener('click', function (){
+    for (let k=1; k<=9; k++) {
+        let a =getRandomInt(0, worldCountries.length);
+        document.getElementById("country"+k).textContent = worldCountries[a];
+        document.getElementById("capital"+k).textContent = worldCapitals[a];
+    }
+    document.querySelector("h1").textContent = "World Capitals";
 });
